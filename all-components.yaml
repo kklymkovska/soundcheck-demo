@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: all-components
+  name: soundcheck-components
   description: A collection of all Github demo components
 spec:
   targets:
