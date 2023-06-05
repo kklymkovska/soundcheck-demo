@@ -6,4 +6,4 @@ metadata:
 spec:
   owner: team-b
   domain: playback
-  type: service
+  type: website
