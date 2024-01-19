@@ -5,6 +5,7 @@ metadata:
   description: Soundcheck Demo Component
   annotations:
     pagerduty.com/integration-key: dsadsadsadsadsadsa
+    sonarqube.org/project-key: test-project-key
   tags:
     - test
 spec:
