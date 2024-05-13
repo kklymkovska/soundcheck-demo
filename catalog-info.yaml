@@ -1,13 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: soundcheck-demo
-  description: Soundcheck Demo Component
+  name: github-entity
+  description: Github Entity
   annotations:
     pagerduty.com/integration-key: dsadsadsadsadsadsa
     sonarqube.org/project-key: test-project-key
+    veriff.com/has-check-executor-kit: "true"
   tags:
     - test
+    - github
 spec:
   type: website
   lifecycle: experimental
