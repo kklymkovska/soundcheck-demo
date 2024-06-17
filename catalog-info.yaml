@@ -11,7 +11,7 @@ metadata:
     - test
     - github
 spec:
-  type: website
+  type: service
   lifecycle: experimental
   owner: toast-infra
   system: soundcheck
