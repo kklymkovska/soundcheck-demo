@@ -1,0 +1,103 @@
+- id: metadata
+  name: Metadata
+  ownerEntityRef: group:default/it-platform-automation
+  description: >
+    This Tracks contains default checks related to Backstage metadata.
+  documentationURL: https://spotify.github.io/spotify-for-backstage-docs/soundcheck/core-concepts/fact-collectors/#catalog-fact-collector
+  filter:
+    catalog:
+      kind: Component
+  levels:
+    # L1 checks
+    - ordinal: 1
+      checks:
+        - id: has_owner
+          name: Has owner
+          description: >
+            The component should have an owner set.
+        - id: has_lifecycle
+          name: Has lifecycle
+          description: >
+            The component should have a lifecycle set.
+        - id: has_system
+          name: Has system
+          description: >
+            The component should have a system set.
+        - id: has_group-id_annotation
+          name: Has group-id annotation
+          description: >
+            The component should have a `group-id` annotation set.
+          filter:
+            catalog:
+              metadata.tags: java
+        - id: has_extension_annotation
+          name: Has extension annotation
+          description: >
+            The component should have a `extension` annotation set.
+          filter:
+            catalog:
+              metadata.tags: java
+        - id: has_it-owner_annotation
+          name: Has it-owner annotation
+          description: >
+            The component should have a `it-owner` annotation set.
+          filter:
+            catalog:
+              metadata.tags: java
+    # L2 checks
+    - ordinal: 2
+      checks:
+        - id: ValidMaintainerCheck
+          name: Has valid maintainer
+          description: >
+            The entity should have a valid maintainer that can be associated to a Backstage Group entity.
+        - id: ValidSystemCheck
+          name: Has valid System
+          description: >
+            The entity should have a valid System that can be associated to a Backstage System entity.
+        - id: has_argocd-app-selector_annotation
+          name: Has ArgoCD app-selector annotation
+          description: >
+            The component should have a `argocd.argoproj.io/app-selector` annotation set.
+          filter:
+            catalog:
+              metadata.tags: kubernetes
+        - id: has_backstage-techdocs_annotation
+          name: Has Backstage techdocs annotation
+          description: >
+            The component should have a `backstage.io/techdocs-ref` or `backstage.io/techdocs-entity` annotation set.
+      # L3 checks
+    - ordinal: 3
+      checks:
+        - id: is_source-location_accessible
+          name: Is source location accessible
+          description: >
+            The source location should be accessible.
+        - id: is_techdocs-ref_accessible
+          name: Is techdocs-ref accessible
+          description: >
+            The techdocs-ref should be accessible.
+          filter:
+            catalog:
+              metadata.annotations['backstage.io/techdocs-ref']: { match: '*' }
+        - id: JenkinsProjectExistenceCheck
+          name: Has real Jenkins job-full-name
+          description: >
+            The component should have a real Jenkins job-full-name set.
+          filter:
+            catalog:
+              metadata.annotations['jenkins.io/job-full-name']: { match: '*' }
+        - id: SonarQubeProjectExistenceCheck
+          name: Has real Sonarqube project key
+          description: >
+            The component should have a real SonarQube project-key set.
+          filter:
+            catalog:
+              metadata.annotations['sonarqube.org/project-key']: { match: '*' }
+        - id: PagerDutyServiceExistsCheck
+          name: Has real PagerDuty service-id
+          description: >
+            The component should have a real PagerDuty service-id set.
+          filter:
+            catalog:
+              metadata.annotations['pagerduty.com/service-id']: { match: '*' }
