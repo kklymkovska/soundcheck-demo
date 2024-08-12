@@ -7,3 +7,4 @@ spec:
   targets:
     - ./catalog-info.yaml
     - ./soundcheck-system.yaml
+    - ./toast-group.yaml
