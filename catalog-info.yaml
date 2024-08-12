@@ -4,7 +4,7 @@ metadata:
   name: github-entity
   description: Github Entity
   annotations:
-    pagerduty.com/service-id: PIJ90N7
+    pagerduty.com/service-id: P18JCJH
     pagerduty.com/integration-key: dsadsadsadsadsadsa
     sonarqube.org/project-key: test-project-key
     datadoghq.com/service-id: test-service-id
