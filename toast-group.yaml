@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: toast-infra
+  annotations:
+    'github.com/team-slug': backstage/toast-infra
+spec:
+  type: team
+  profile:
+    displayName: Toasts
+  parent: platform
+  children: []
