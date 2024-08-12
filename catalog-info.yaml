@@ -9,6 +9,7 @@ metadata:
     sonarqube.org/project-key: test-project-key
     datadoghq.com/service-id: test-service-id
     backstage.io/kubernetes-id: soundcheck-test-service
+    atlassian.net/jql: project = "SCRUM"
   tags:
     - github
     - k8s
