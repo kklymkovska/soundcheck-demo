@@ -8,10 +8,14 @@ metadata:
     pagerduty.com/integration-key: dsadsadsadsadsadsa
     sonarqube.org/project-key: test-project-key
     datadoghq.com/service-id: test-service-id
+    backstage.io/kubernetes-id: soundcheck-test-service
   tags:
     - github
+    - k8s
 spec:
   type: service
   lifecycle: production
   owner: toast-infra
   system: soundcheck
+  dependsOn:
+    - resource:default/gke-test-cluster-1
