@@ -7,12 +7,10 @@ metadata:
     pagerduty.com/service-id: PIJ90N7
     pagerduty.com/integration-key: dsadsadsadsadsadsa
     sonarqube.org/project-key: test-project-key
-    veriff.com/has-check-executor-kit: "true"
   tags:
-    - test
     - github
 spec:
   type: service
-  lifecycle: experimental
+  lifecycle: production
   owner: toast-infra
   system: soundcheck
