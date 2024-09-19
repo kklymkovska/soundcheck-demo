@@ -1,0 +1,28 @@
+version: 2
+useBuildIdentity: true
+timeout: 60
+
+environment:
+  - ref: ".*"
+    envs:
+      DEB_BUILD_OPTIONS: 'parallel=16'
+
+pipelines:
+- pipeline: "Review build"
+  ref: "pr/.*/merge"
+  stages:
+  - stage: "Debian Package"
+    tasks:
+    - task: "build"
+      steps:
+      - action: "gcr.io/action-containers/debian-packages-focal:4@sha256:90298c2df4d265222764f3da54f184671c7bd28e390167e58727677139b49da2"
+        args: ["build"]
+- pipeline: "Master build"
+  ref: "master"
+  stages:
+  - stage: "Debian Package"
+    tasks:
+    - task: "build and publish"
+      steps:
+      - action: "gcr.io/action-containers/debian-packages-focal:4@sha256:90298c2df4d265222764f3da54f184671c7bd28e390167e58727677139b49da2"
+        args: ["build", "publish"]
