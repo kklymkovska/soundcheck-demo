@@ -7,8 +7,8 @@ metadata:
     pagerduty.com/service-id: P18JCJH
     pagerduty.com/integration-key: dsadsadsadsadsadsa
     # sonarqube.org/project-key: test-project-key
-    sonarqube.org/organization-key: kklymkovska-test
-    sonarqube.org/project-key: kklymkovska-test-project
+    sonarqube.org/organization-key: kklymkovska
+    sonarqube.org/project-key: kklymkovska_soundcheck-demo
     datadoghq.com/service-id: test-service-id
     backstage.io/kubernetes-id: soundcheck-test-service
     atlassian.net/jql: project = "SCRUM"
