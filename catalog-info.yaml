@@ -12,10 +12,8 @@ metadata:
     datadoghq.com/service-id: test-service-id
     backstage.io/kubernetes-id: soundcheck-test-service
     atlassian.net/jql: project = "SCRUM"
-    backstage.io/source-location: url:https://github.com/kklymkovska/soundcheck-demo
   tags:
     - github
-    - k8s
 spec:
   type: service
   lifecycle: production
