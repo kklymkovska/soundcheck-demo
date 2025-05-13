@@ -5,8 +5,8 @@ metadata:
   description: Github Entity
   annotations:
     # pagerduty.com/service-id: P18JCJH
-    pagerduty.com/service-id: P9TSZZ5X # uncomment
-    pagerduty.com/integration-key: a47161262f244a92b04029c7a4a8e263 # uncomment
+    pagerduty.com/service-id: P9TSZZ5X
+    pagerduty.com/integration-key: a47161262f244a92b04029c7a4a8e263
     # sonarqube.org/project-key: test-project-key
     sonarqube.org/organization-key: kklymkovska
     sonarqube.org/project-key: kklymkovska_soundcheck-demo
