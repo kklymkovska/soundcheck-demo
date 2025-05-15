@@ -24,3 +24,8 @@ spec:
   system: soundcheck
   dependsOn:
     - resource:default/gke-test-cluster-1
+  trackedDependencies:
+    - name: "@cvent/foo"
+      version: 1.4.25
+    - name: "@cvent/carina"
+      version: 2.0.1
