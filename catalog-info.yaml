@@ -13,7 +13,7 @@ metadata:
     # sonarqube.org/project-key: kklymkovska_soundcheck-demo-test
     datadoghq.com/service-id: test-service-id
     backstage.io/kubernetes-id: soundcheck-test-service
-    atlassian.net/jql: project = "SCRUM"
+    atlassian.net/jql: project = "TOAST" and status = "To Do"
   labels:
     version: 8.11.3
   tags:
