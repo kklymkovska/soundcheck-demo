@@ -1,80 +1,4 @@
 ---
-- id: valid-readme-track-two
-  name: Readme Is Valid Two
-  ownerEntityRef: group:default/toast-infra
-  description: |
-    A Track with one or more checks concerning the readme file to ensure it's validity.
-  filter:
-    catalog:
-      spec.lifecycle: 'production'
-  documentationURL: https://www.backstage.io
-  levels:
-    - ordinal: 1
-      checks:
-        - id: readme-isnt-boilerplate
-          name: Readme is more than boilerplate
-          description: >
-            Verifies that readme is more than boilerplate.
-
-- id: micro-certified-four
-  name: Micro Certified Four
-  ownerEntityRef: group:default/toast-infra
-  description: |
-    Improve **quality** and **reliability** of your software component
-    by measuring the use of testing best practices, but just a little.
-  filter:
-    catalog:
-      spec.lifecycle: 'production'
-  documentationURL: https://www.backstage.io
-  levels:
-    - ordinal: 1
-      checks:
-        - id: has-production-lifecycle
-          name: Has Production Lifecycle
-          description: >
-            Verifies that the component has a production lifecycle.
-    - ordinal: 2
-      checks:
-        - id: tests-passed
-          name: Tests passed on CI
-          description: >
-            This check validates both that you have tests, and that none of them
-            are failing on CI.
-
-            Success or failure of tests is determined by using the JUnit test
-            results reported during Tingle builds of the default branch.
-        - id: tests-run
-          name: Tests run on CI
-          description: >
-            Indicates whether your system is set up correctly to run tests and
-            report the results. You must have at least one test.
-- id: micro-certified
-  name: Micro Certified
-  ownerEntityRef: group:default/toast-infra
-  description: |
-    Improve **quality** and **reliability** of your software component
-    by measuring the use of testing best practices, but just a little.
-  filter:
-    catalog:
-      spec.lifecycle: 'production'
-  documentationURL: https://www.backstage.io
-  levels:
-    - ordinal: 1
-      checks:
-        - id: has-production-lifecycle
-          name: Has Production Lifecycle
-          description: >
-            Verifies that the component has a production lifecycle.
-    # - ordinal: 2
-    #   checks:
-    #     - id: tests-passed
-    #       name: Tests passed on CI
-    #       description: >
-    #         This check validates both that you have tests, and that none of them
-    #         are failing on CI.
-
-    #         Success or failure of tests is determined by using the JUnit test
-    #         results reported during Tingle builds of the default branch.
 - id: test-certified
   name: Test Certified
   ownerEntityRef: group:default/imaginary-goats
@@ -82,11 +6,27 @@
     Improve **quality** and **reliability** of your software component
     by measuring the use of testing best practices.
   filter:
-    catalog:
-      spec.lifecycle: 'experimental'
+    spec.lifecycle: 'production'
   documentationURL: https://www.backstage.io
   levels:
     - ordinal: 1
+      badge:
+        svg: >
+          <svg version="1.1" fill="#FFD700" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 311.783 311.783" xml:space="preserve"><g><g><path d="M198.523,123.575h-85.262c-2.516,0-4.885-1.183-6.396-3.194c-1.511-2.011-1.988-4.616-1.289-7.032l11.768-40.632
+          c0.991-3.42,4.123-5.774,7.685-5.774h61.726c3.561,0,6.693,2.354,7.684,5.774l11.768,40.632c0.699,2.416,0.222,5.021-1.289,7.032
+          C203.407,122.392,201.038,123.575,198.523,123.575z M123.906,107.575h63.971l-7.134-24.632h-49.702L123.906,107.575z"/></g><g><path d="M145.891,184.208H60.63c-2.516,0-4.885-1.183-6.396-3.194c-1.511-2.011-1.988-4.616-1.289-7.032l11.769-40.632
+          c0.991-3.421,4.123-5.774,7.685-5.774h61.726c3.561,0,6.693,2.354,7.685,5.775l11.767,40.632c0.699,2.416,0.222,5.021-1.289,7.031
+          C150.774,183.025,148.406,184.208,145.891,184.208z M71.275,168.208h63.97l-7.133-24.632H78.41L71.275,168.208z"/></g><g><path d="M251.153,184.208h-85.261c-2.516,0-4.884-1.183-6.396-3.194c-1.511-2.011-1.988-4.615-1.289-7.031l11.767-40.632
+          c0.991-3.421,4.123-5.775,7.685-5.775h61.726c3.561,0,6.693,2.354,7.684,5.774l11.769,40.632c0.699,2.416,0.222,5.02-1.289,7.032
+          C256.038,183.025,253.669,184.208,251.153,184.208z M176.538,168.208h63.97l-7.135-24.632h-49.702L176.538,168.208z"/></g><g><path d="M93.261,244.84H8c-2.516,0-4.885-1.183-6.396-3.194c-1.511-2.011-1.988-4.616-1.289-7.032l11.769-40.632
+          c0.991-3.42,4.123-5.774,7.685-5.774h61.725c3.561,0,6.693,2.354,7.684,5.774l11.768,40.632c0.699,2.416,0.222,5.021-1.289,7.032
+          C98.146,243.657,95.776,244.84,93.261,244.84z M18.646,228.84h63.97l-7.134-24.632H25.78L18.646,228.84z"/></g><g><path d="M198.523,244.84h-85.262c-2.516,0-4.885-1.183-6.396-3.194c-1.511-2.011-1.988-4.616-1.289-7.032l11.767-40.632
+          c0.991-3.42,4.123-5.774,7.685-5.774h61.726c3.561,0,6.693,2.354,7.685,5.774l11.768,40.632c0.699,2.416,0.222,5.02-1.289,7.032
+          C203.407,243.657,201.038,244.84,198.523,244.84z M123.906,228.84h63.971l-7.135-24.632H131.04L123.906,228.84z"/></g><g><path d="M303.783,244.84h-85.261c-2.516,0-4.885-1.183-6.396-3.194c-1.511-2.011-1.988-4.616-1.289-7.032l11.768-40.632
+          c0.991-3.42,4.123-5.774,7.685-5.774h61.725c3.562,0,6.693,2.354,7.685,5.774l11.769,40.632c0.699,2.416,0.222,5.02-1.289,7.032
+          C308.668,243.657,306.299,244.84,303.783,244.84z M229.168,228.84h63.97l-7.135-24.632h-49.701L229.168,228.84z"/></g></g></svg>
+      description: >
+        This level description is _using_ some **markdown**!
       checks:
         - id: has-production-lifecycle
           name: Has Production Lifecycle
@@ -120,6 +60,8 @@
             service owner a valuable input if there is reason to work on
             stability.
     - ordinal: 2
+      badge:
+        color: '#ffff00'
       checks:
         - id: tests-passed
           name: Tests passed on CI
@@ -137,7 +79,7 @@
             Even though code coverage can be a misleading metric, since
             it doesn't actually guarantee any quality, the lack of
             coverage does prove lack of tests. Therefore, based on the
-            numbers from the original program, the requirement is to
+            numbers from the original track, the requirement is to
             have branch coverage higher than 50% when running your tests.
         - id: static-analysis-no-warnings
           name: Static analysis has no warnings
@@ -173,9 +115,10 @@
             and to provide a guide to anyone using your website what kind of
             reliability they can expect.
           filter:
-            catalog:
-              spec.type: service
+            spec.type: service
     - ordinal: 3
+      badge:
+        color: '#00ff00'
       checks:
         - id: continuous-deployment-in-place
           name: Continuous deployment is in place
@@ -220,8 +163,9 @@
     Reduce decision making and maintenance by following Golden Technologies for
     Web and the opinionated Web Golden Path standards.
   filter:
-    catalog:
-      spec.type: 'website'
+    spec.type: 'website'
+  badge:
+    type: 'status'
   levels:
     - ordinal: 0
       name: Recommended
@@ -265,16 +209,14 @@
         - id: has-react
           name: Has React
           filter:
-            catalog:
-              spec.type: 'website'
+            spec.type: 'website'
           description: >
             React should be used for building web-based user interfaces. This
             check verifies that React is present in the package.json.
         - id: has-typescript
           name: Has TypeScript
           filter:
-            catalog:
-              spec.type: 'website'
+            spec.type: 'website'
           description: >
             TypeScript should be used for web applications and libraries. This
             check verifies that at least one TypeScript file exists in your
@@ -286,8 +228,7 @@
         - id: has-nextjs
           name: Has NextJS
           filter:
-            catalog:
-              spec.type: 'website'
+            spec.type: 'website'
           description: >
             [NextJS](nextjs.org) should be used as our framework of choice for
             React websites. This check verifies that a dependency on NextJS is
@@ -336,7 +277,7 @@
             schedule. Lighthouse audits provide your website's pages with scores
             on performance, accessibility, best practices, SEO and more. Enable
             scheduled Lighthouse audits by providing a
-            `lighthouse.com/website_url` annotaction in your catalog-info
+            `lighthouse.com/website_url` annotation in your catalog-info
             metadata.
         - id: uses-testing-library
           name: Has @testing-library/react
