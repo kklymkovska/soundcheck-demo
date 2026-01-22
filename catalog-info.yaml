@@ -21,8 +21,8 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: toast-infra
-  system: soundcheck
+  owner: potential-pals
+  system: audio-playback
   dependsOn:
     - resource:default/gke-test-cluster-1
   trackedDependencies:
