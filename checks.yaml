@@ -21,10 +21,6 @@
         path: $.metadata.annotations['pagerduty.com/service-id']
         operator: exists
         value: true
-      - factRef: catalog:default/entity_descriptor
-        path: $.metadata.annotations['pagerduty.com/integration-key']
-        operator: exists
-        value: true
   filter:
     - kind:
         - Component
