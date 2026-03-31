@@ -1,0 +1,31 @@
+- id: 1b1f0c15-cbf9-4665-9186-ef48474e3140
+  ownerEntityRef: user:default/kklymkovska
+  name: Has PagerDuty Annotation
+  description: >-
+    Verifies that the entity's metadata contains either the
+    `pagerduty.com/service-id` or `pagerduty.com/integration-key` annotation.
+  pathResolver: jsonpath
+  passedMessage: >-
+    The PagerDuty annotation {% if
+    fact.data.metadata.annotation['pagerduty.com/service-id'] %}
+    `pagerduty.com/service-id` {% else %} `pagerduty.com/integration-key` {% endif
+    %} is defined in the entity's metadata.
+  failedMessage: >-
+    Neither the `pager.com/service-id` nor `pagerduty.com/integration-key`
+    annotation is defined.
+
+     Please add either the `pager.com/service-id` or `pagerduty.com/integration-key` annotation. See the [PagerDuty plugin for Backstage documentation](https://pagerduty.github.io/backstage-plugin-docs/getting-started/backstage/) for more information.
+  rule:
+    any:
+      - factRef: catalog:default/entity_descriptor
+        path: $.metadata.annotations['pagerduty.com/service-id']
+        operator: exists
+        value: true
+      - factRef: catalog:default/entity_descriptor
+        path: $.metadata.annotations['pagerduty.com/integration-key']
+        operator: exists
+        value: true
+  filter:
+    - kind:
+        - Component
+  type: default
